@@ -792,6 +792,14 @@ body .nb{white-space:nowrap}
 /* 40版目：数字のカードの説明は、行の長さをそろえる（「年商」「会社」だけが次の行に落ちるのを防ぐ） */
 body .k{text-wrap:balance}
 
+/* 48版目：導入の流れは5つ。最初の箱の緑をやめ、重点の2つを緑に */
+body .steps.s5 li:first-child{background:var(--paper)}
+body .steps.s5 li:first-child .st{color:#fff}
+body .steps.s5 li:first-child p{color:#2a2824}
+body .steps.s5 li.key{background:var(--green)}
+body .steps.s5 li.key .st{color:var(--green)}
+body .steps.s5 li.key p{color:#111}
+
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}.f-err{margin:0 0 12px;padding:10px 12px;border:2px solid #c0392b;border-radius:10px;background:#fff;color:#c0392b;font-weight:700;font-size:14px}.cal-frame{display:block;width:100%;height:640px;border:0;border-radius:12px;background:#fff}button.btn.sending{opacity:.6;pointer-events:none}.doc-after{text-align:center}.doc-after a.btn{display:inline-flex;justify-content:center;text-decoration:none}.doc-after p{margin:14px 0 0;font-size:14px;line-height:1.7}.doc-after .doc-next{margin-top:28px;font-weight:800;font-size:16px}.doc-book{margin-top:12px;padding:12px 22px;border:2px solid #111;border-radius:999px;background:#fff;color:#111;font:inherit;font-weight:800;font-size:15px;cursor:pointer}.doc-after .cal-frame{margin-top:14px}
 footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}.f-priv{margin:14px 0 0;text-align:center;font-size:12.5px;line-height:1.7;opacity:.8}.f-priv a{color:inherit;text-decoration:underline;text-underline-offset:3px}</style>
 </head>
@@ -834,7 +842,7 @@ footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}.f-pr
 </div>
 <ul class="proof">
   <li><b><span>150</span>人規模</b>の<wbr>会社に<wbr>AIを<wbr>導入</li>
-  <li>人件費を<b>年間で約<span>6,000</span>万円</b>削減</li>
+  <li>1社で、<wbr>外注費を<b>年間で約<span>6,000</span>万円</b>削減</li>
   <li><b><span>365</span>日</b>、<wbr>AIを<wbr>使っている</li>
 </ul>
 </div>
@@ -915,10 +923,10 @@ footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}.f-pr
   </div>
   <div class="about-grid">
     <div>
-      <p class="intro">人事と<wbr>して、<wbr>150人規模の<wbr>会社に<wbr>AIを<wbr>導入し、<wbr>年間で<wbr>約6,000万円の<wbr>人件費を<wbr>削減しました。<wbr>今は<wbr>年商20億の<wbr>AIベンチャーで、<wbr>AIで<wbr>仕事の<wbr>成果を<wbr>出すための<wbr>プロダクトの<wbr>運営に<wbr>関わりながら、<wbr>マーケティングの<wbr>責任者を<wbr>しています。<wbr>マーケティングの<wbr>業務は<wbr>AIを<wbr>使って<wbr>1人で<wbr>回し、<wbr>ほかの<wbr>メンバーとも<wbr>一緒に<wbr>仕事を<wbr>しています。<wbr>AIを<wbr>仕事に<wbr>どう<wbr>活かすかも、<wbr>自分で<wbr>使いながら<wbr>毎日<wbr>研究しています。</p>
+      <p class="intro">人事と<wbr>して、<wbr>150人規模の<wbr>会社に<wbr>AIを<wbr>導入しました。<wbr>外に<wbr>頼んでいた<wbr>問い合わせ対応・動画作成・記事作成・SNS運用などの<wbr>業務を<wbr>AIで<wbr>自動化し、<wbr>1社で<wbr>年間約6,000万円の<wbr>外注費を<wbr>削減しました。<wbr>今は<wbr>年商20億の<wbr>AIベンチャーで、<wbr>AIで<wbr>仕事の<wbr>成果を<wbr>出すための<wbr>プロダクトの<wbr>運営に<wbr>関わりながら、<wbr>マーケティングの<wbr>責任者を<wbr>しています。<wbr>マーケティングの<wbr>業務は<wbr>AIを<wbr>使って<wbr>1人で<wbr>回し、<wbr>ほかの<wbr>メンバーとも<wbr>一緒に<wbr>仕事を<wbr>しています。<wbr>AIを<wbr>仕事に<wbr>どう<wbr>活かすかも、<wbr>自分で<wbr>使いながら<wbr>毎日<wbr>研究しています。</p>
       <div class="nums">
         <div><div class="v"><span class="cnt" data-to="150">150</span><small>人規模</small></div><div class="k">人事と<wbr>して、<wbr>AIを<wbr>導入した<wbr>会社</div></div>
-        <div><div class="v"><small>約</small><span class="cnt" data-to="6000">6,000</span><small>万円</small></div><div class="k">AIの<wbr>導入で<wbr>削減した<wbr>人件費<wbr>（年間）</div></div>
+        <div><div class="v"><small>約</small><span class="cnt" data-to="6000">6,000</span><small>万円</small></div><div class="k">AIの<wbr>導入で<wbr>削減した<wbr>外注費<wbr>（1社・年間）</div></div>
         <div><div class="v"><span class="cnt" data-to="20">20</span><small>億円</small></div><div class="k">マーケティングの<wbr>責任者を<wbr>務める<wbr>会社の<wbr>年商</div></div>
         <div><div class="v"><span class="cnt" data-to="365">365</span><small>日</small></div><div class="k">毎日<wbr>AIを<wbr>使っている。<wbr>外出中も<wbr>スマホから</div></div>
       </div>
@@ -929,7 +937,7 @@ footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}.f-pr
         <li><span class="lbl">事業</span><span class="txt">NFTの<wbr>プロジェクトを<wbr>立ち上げ、<wbr>取引1.5億円</span></li>
         <li><span class="lbl">事業</span><span class="txt">プロeスポーツチームと<wbr>会社を<wbr>立ち上げ、<wbr>事業を<wbr>譲渡</span></li>
         <li><span class="lbl">事業</span><span class="txt">ほかにも、<wbr>いくつもの<wbr>事業を<wbr>立ち上げる</span></li>
-        <li><span class="lbl">人事</span><span class="txt">150人規模の<wbr>会社に<wbr>AIを<wbr>導入し、<wbr>年間で<wbr>約6,000万円の<wbr>人件費を<wbr>削減</span></li>
+        <li><span class="lbl">人事</span><span class="txt">150人規模の<wbr>会社に<wbr>AIを<wbr>導入し、<wbr>1社で<wbr>年間約6,000万円の<wbr>外注費を<wbr>削減</span></li>
         <li><span class="lbl">今</span><span class="txt">AIで<wbr>仕事の<wbr>成果を<wbr>出すための<wbr>プロダクトの<wbr>運営と、<wbr>マーケティングの<wbr>責任者</span></li>
       </ul>
       <div class="links">
@@ -946,7 +954,7 @@ footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}.f-pr
   <p class="both-lead">竹内は、<wbr>AIを<wbr>仕事に<wbr>どう<wbr>活かすかを<wbr>自分で<wbr>研究しながら、<wbr>自分の<wbr>仕事と、<wbr>150人規模の<wbr>組織の<wbr>両方で、<wbr>AIを<wbr>成果に<wbr>つなげてきました。<wbr>その<wbr>経験から、<wbr>御社の<wbr>仕事を<wbr>一緒に<wbr>考えます。</p>
   <div class="both-grid three">
     <article class="bx"><span class="tag">強み 1</span><span class="bn" aria-hidden="true">1</span><h3>AIを<wbr>仕事に<wbr>どう<wbr>活かすかを、<br>毎日<wbr>研究している</h3><p>365日、<wbr>自分で<wbr>AIを<wbr>使い、<wbr>どうすれば<wbr>仕事に<wbr>活かせるか、<wbr>どうすれば<wbr>使いやすいかを、<wbr>自分の<wbr>仕事で<wbr>試し続けています。<wbr>AIで<wbr>仕事を<wbr>回すための<wbr>プロダクトの<wbr>開発と、<wbr>AIに<wbr>仕事の<wbr>やり方を<wbr>覚えさせる<wbr>「スキル」の<wbr>開発も<wbr>しています。</p></article>
-    <article class="bx hi"><span class="tag">強み 2</span><span class="bn" aria-hidden="true">2</span><h3>使うだけでなく、<wbr>仕事の<wbr>成果に<wbr>つなげてきた</h3><p>マーケティングの<wbr>業務を<wbr>AIを<wbr>使って<wbr>1人で<wbr>回しています。<wbr>人事と<wbr>しては、<wbr>AIの<wbr>導入で<wbr>年間で<wbr>約6,000万円の<wbr>人件費を<wbr>削減しました。</p></article>
+    <article class="bx hi"><span class="tag">強み 2</span><span class="bn" aria-hidden="true">2</span><h3>使うだけでなく、<wbr>仕事の<wbr>成果に<wbr>つなげてきた</h3><p>マーケティングの<wbr>業務を<wbr>AIを<wbr>使って<wbr>1人で<wbr>回しています。<wbr>人事と<wbr>しては、<wbr>外に<wbr>頼んでいた<wbr>業務を<wbr>AIで<wbr>自動化し、<wbr>1社で<wbr>年間約6,000万円の<wbr>外注費を<wbr>削減しました。</p></article>
     <article class="bx"><span class="tag">強み 3</span><span class="bn" aria-hidden="true">3</span><h3>1人ではなく、<wbr>組織の<wbr>全員で<wbr>使う<wbr>形を<wbr>作ってきた</h3><p>150人規模の<wbr>会社に<wbr>AIを<wbr>導入しました。<wbr>1人の<wbr>会社から<wbr>100人規模の<wbr>会社まで、<wbr>人数に<wbr>合わせた<wbr>進め方を<wbr>お話しします。</p></article>
   </div>
 </div></section>
@@ -990,24 +998,23 @@ footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}.f-pr
 <section class="flow" id="flow" data-en="FLOW"><div class="wrap">
   <span class="sec-label"><i>08</i>FLOW</span>
   <h2>AI導入までの<wbr>流れ</h2>
-  <p class="flow-lead">STEP 1の<wbr>相談は<wbr>無料です。<wbr>STEP 2からは、<wbr>続けて<wbr>導入を<wbr>進めたい<wbr>場合の<wbr>流れです。</p>
-  <ol class="steps">
-    <li><span class="st">STEP 1・無料</span><h3>無料で<wbr>相談する<wbr>（1時間）</h3><p>今の<wbr>仕事と<wbr>困りごとを<wbr>伺い、<wbr>導入の<wbr>進め方を<wbr>お話しします。</p></li>
-    <li><span class="st">STEP 2</span><h3>今の<wbr>仕事を<wbr>棚卸しする</h3><p>御社の<wbr>目標と<wbr>今の<wbr>仕事を<wbr>一緒に<wbr>書き出し、<wbr>目標に<wbr>効く<wbr>仕事を<wbr>選びます。</p></li>
-    <li><span class="st">STEP 3</span><h3>やり方を<wbr>共有する<wbr>場所を<wbr>作る</h3><p>会社の<wbr>状況と<wbr>仕事の<wbr>進め方を、<wbr>全員が<wbr>見られて、<wbr>AIも<wbr>読める<wbr>場所に<wbr>置きます。</p></li>
-    <li><span class="st">STEP 4</span><h3>一部の<wbr>仕事から<wbr>始める</h3><p>選んだ<wbr>仕事で<wbr>AIを<wbr>使い、<wbr>成果に<wbr>つながるかを<wbr>確かめます。</p></li>
-    <li><span class="st">STEP 5</span><h3>会社の<wbr>全体に<wbr>広げる</h3><p>使い方を<wbr>社員の<wbr>皆さんに<wbr>伝え、<wbr>全員が<wbr>AIに<wbr>頼める<wbr>形に<wbr>します。</p></li>
-    <li class="last"><span class="st">STEP 6</span><h3>使い続ける<wbr>形に<wbr>する</h3><p>AIの<wbr>新しい<wbr>情報を<wbr>お伝えしながら、<wbr>やり方を<wbr>足し続けます。</p></li>
+  <p class="flow-lead">無料の<wbr>相談の<wbr>あと、<wbr>続けて<wbr>導入を<wbr>進めたい<wbr>場合の<wbr>流れです。<wbr>竹内が<wbr>最も<wbr>力を<wbr>入れるのは、<span class="nb">STEP 3と</span><span class="nb">STEP 4です。</span>成果に<wbr>つながらなければ、<wbr>AIへの<wbr>頼み方か、<wbr>任せる<wbr>仕事を<wbr>変えます。</p>
+  <ol class="steps s5">
+    <li><span class="st">STEP 1</span><h3>AIエージェントを<wbr>使えるようになる</h3><p>御社に<wbr>合う<wbr>AIの<wbr>道具<wbr>（Claude Codeや<wbr>Codexなど）を<wbr>入れ、<wbr>実際の<wbr>仕事を<wbr>1つ<wbr>AIに<wbr>任せてみます。<wbr>AIへの<wbr>頼み方も<wbr>身に<wbr>つけます。</p></li>
+    <li><span class="st">STEP 2</span><h3>一部の<wbr>業務を<wbr>自動化する</h3><p>問い合わせの<wbr>仕分けや、<wbr>会議からの<wbr>ToDo出しのように、<wbr>手順が<wbr>決まっている<wbr>業務は、<wbr>AIに<wbr>話すだけで<wbr>自動化します。<wbr>記事作成や<wbr>動画編集のような<wbr>複雑な<wbr>業務は、<wbr>AIが<wbr>自分で<wbr>確かめて<wbr>直す<wbr>仕組みを<wbr>作ります。</p></li>
+    <li class="key"><span class="st">STEP 3・重点</span><h3>業務を<wbr>棚卸しする</h3><p>御社の<wbr>目標を<wbr>伺い、<wbr>今の<wbr>業務を<wbr>一覧に<wbr>して、<wbr>目標に<wbr>つながる<wbr>仕事に<wbr>印を<wbr>付けます。<wbr>AIで<wbr>効果の<wbr>大きい<wbr>所から<wbr>進めます。</p></li>
+    <li class="key"><span class="st">STEP 4・重点</span><h3>AIが<wbr>働ける<wbr>環境を<wbr>作る</h3><p>会社の<wbr>目標・仕事の<wbr>進め方・<wbr>これまでの<wbr>経緯を、<wbr>AIが<wbr>読める<wbr>場所<wbr>（基本は<wbr>Addness）に<wbr>置きます。<wbr>説明し直さずに、<wbr>AIに<wbr>仕事を<wbr>頼めるようになります。</p></li>
+    <li class="last"><span class="st">STEP 5</span><h3>組織に<wbr>広げる</h3><p>使い方を<wbr>社員の<wbr>皆さんに<wbr>伝え、<wbr>つまずいた<wbr>方の<wbr>質問に<wbr>答えます。<wbr>AIへの<wbr>頼み方を<wbr>一覧に<wbr>してお渡しします。</p></li>
   </ol>
 </div></section>
 
 <section class="price svc" id="service" data-en="SERVICE"><div class="wrap">
   <span class="sec-label"><i>09</i>SERVICE</span>
   <h2>ご提供している<wbr>サービス</h2>
-  <p class="price-lead">入口は、<wbr>無料の<wbr>相談です。<wbr>続けて<wbr>頼む<wbr>場合は、<wbr>相談で<wbr>御社に<wbr>合う方を<wbr>決めます。</p>
+  <p class="price-lead">最初は、<wbr>無料の<wbr>相談です。<wbr>進める<wbr>中身は、<wbr>どちらも<wbr>上の<wbr>STEP 1〜5です。<wbr>竹内が<wbr>直接進めるか、<wbr>御社が<wbr>講座で<wbr>学びながら<wbr>進めるかを、<wbr>相談で<wbr>決めます。</p>
   <div class="price-grid">
-    <div class="pc"><div class="t">AI顧問</div><p>AIの<wbr>ことなら、<wbr>いつでも<wbr>何でも、<wbr>チャットで<wbr>質問できます。<wbr>AIの<wbr>使い方の<wbr>講座も<wbr>見られます。</p><p class="fit"><b>向いている<wbr>会社</b>社内で、<wbr>自分たちで<wbr>進められる<wbr>会社。<br>AIを<wbr>まだ<wbr>使っていなくても、<wbr>講座から<wbr>始められます。</p></div>
-    <div class="pc"><div class="t">導入支援</div><p>竹内が、<wbr>御社の<wbr>AI導入を<wbr>直接進めます。</p><p class="fit"><b>向いている<wbr>会社</b>竹内に<wbr>直接進めてほしい<wbr>会社、<wbr>会社の<wbr>全体に<wbr>AIを<wbr>入れたい<wbr>会社</p></div>
+    <div class="pc"><div class="t">導入支援</div><p>竹内が、<wbr>STEP 1〜5を<wbr>直接進めます。<wbr>オンラインで<wbr>打ち合わせを<wbr>しながら<wbr>進めます。</p><p class="fit"><b>向いている<wbr>会社</b>竹内に<wbr>直接進めてほしい<wbr>会社、<wbr>会社の<wbr>全体に<wbr>AIを<wbr>入れたい<wbr>会社</p></div>
+    <div class="pc"><div class="t">AI研修</div><p>同じ<wbr>中身を<wbr>講座で<wbr>学び、<wbr>御社で<wbr>進めます。<wbr>AIの<wbr>ことなら、<wbr>いつでも<wbr>何でも、<wbr>チャットで<wbr>竹内に<wbr>質問できます。</p><p class="fit"><b>向いている<wbr>会社</b>社内で、<wbr>自分たちで<wbr>進められる<wbr>会社。<br>AIを<wbr>まだ<wbr>使っていなくても、<wbr>講座から<wbr>始められます。</p></div>
   </div>
 </div></section>
 
