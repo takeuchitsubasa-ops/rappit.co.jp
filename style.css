@@ -69,7 +69,7 @@ h2{margin:0;font-size:clamp(24px,3vw,32px);line-height:1.4;letter-spacing:.06em}
 .band + section.sec,.band + .contact{margin-top:0}
 
 /* 事業内容 */
-.biz{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 40px}
+.biz{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 40px}
 .biz li{border-top:2px solid var(--ink);padding-top:28px}
 .biz .num{font-family:var(--latin);font-size:14px;font-weight:600;letter-spacing:.12em;color:var(--accent)}
 .biz h3{margin:10px 0 16px;font-size:20px;line-height:1.5;letter-spacing:.04em}
