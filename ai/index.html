@@ -802,6 +802,9 @@ body .steps.s5 li.key p{color:#111}
 
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}.f-err{margin:0 0 12px;padding:10px 12px;border:2px solid #c0392b;border-radius:10px;background:#fff;color:#c0392b;font-weight:700;font-size:14px}.cal-frame{display:block;width:100%;height:640px;border:0;border-radius:12px;background:#fff}button.btn.sending{opacity:.6;pointer-events:none}.doc-after{text-align:center}.doc-after a.btn{display:inline-flex;justify-content:center;text-decoration:none}.doc-after p{margin:14px 0 0;font-size:14px;line-height:1.7}.doc-after .doc-next{margin-top:28px;font-weight:800;font-size:16px}.doc-book{margin-top:12px;padding:12px 22px;border:2px solid #111;border-radius:999px;background:#fff;color:#111;font:inherit;font-weight:800;font-size:15px;cursor:pointer}.doc-after .cal-frame{margin-top:14px}
 footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}.f-priv{margin:14px 0 0;text-align:center;font-size:12.5px;line-height:1.7;opacity:.8}.f-priv a{color:inherit;text-decoration:underline;text-underline-offset:3px}</style>
+<!-- Google タグ（GA4・RAPPIT） -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WGKH6LDX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());</script>
 </head>
 <body>
 
@@ -1133,7 +1136,7 @@ btn.addEventListener('click',function(){
   if(!CFG.endpoint){show('ただいま準備中です。');return}
   show('');btn.disabled=true;btn.classList.add('sending');
   fetch(CFG.endpoint,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(d)})
-   .then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){if(!j||!j.ok)throw 0;finish(m)})
+   .then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){if(!j||!j.ok)throw 0;try{gtag('event','generate_lead',{form_kind:d.kind||'',page_path:location.pathname})}catch(e){}finish(m)})
    .catch(function(){btn.disabled=false;btn.classList.remove('sending');show('送信できませんでした。お手数ですが、時間をおいて、もう一度お試しください。')});
 });
 })();

@@ -941,6 +941,9 @@ body .hero .team.sp{margin:6px 0 14px}
 .cases.three b{color:var(--blue)}
 .what .txt.intro2{margin:0 0 28px}
 </style>
+<!-- Google タグ（GA4・RAPPIT） -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WGKH6LDX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());</script>
 </head>
 <body>
 
@@ -1187,7 +1190,7 @@ btn.addEventListener('click',function(){
   if(!CFG.endpoint){show('ただいま準備中です。');return}
   show('');btn.disabled=true;btn.classList.add('sending');
   fetch(CFG.endpoint,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(d)})
-   .then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){if(!j||!j.ok)throw 0;finish()})
+   .then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){if(!j||!j.ok)throw 0;try{gtag('event','generate_lead',{form_kind:d.kind||'',page_path:location.pathname})}catch(e){}finish()})
    .catch(function(){btn.disabled=false;btn.classList.remove('sending');show('送信できませんでした。お手数ですが、時間をおいて、もう一度お試しください。')});
 });
 })();
