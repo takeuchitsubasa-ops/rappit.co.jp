@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>AIで業務効率化する9ステップ｜無料のAI導入相談</title>
+<meta name="description" content="Claude CodeとAddnessで、PCの仕事をAIに任せていく9ステップ。今どのステップにいて、次に何をやるかを、1時間の無料相談で一緒に整理します。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AIで業務効率化する9ステップ｜無料のAI導入相談">
+<meta property="og:description" content="今どのステップにいて、次に何をやるかを、1時間の無料相談で一緒に整理します。">
+<meta property="og:url" content="https://rappit.co.jp/ai/9steps/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<style>
+:root{--navy:#0B1437;--green:#3CE58B;--green-d:#0A8040;--green-l:#E9F9F0;--line:#D9DEE8;--gray:#5B6478;--bg:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--navy);font-family:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif;font-weight:500;font-size:16px;line-height:1.8;word-break:keep-all;overflow-wrap:anywhere}
+img{max-width:100%;display:block}
+.p{display:inline-block}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.tag{display:inline-block;background:var(--green);color:var(--navy);font-weight:900;font-size:14px;line-height:1;padding:7px 12px;border-radius:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:60px;padding:14px 30px;border:0;border-radius:999px;background:var(--green);color:var(--navy);font:inherit;font-weight:900;font-size:18px;line-height:1.3;text-decoration:none;cursor:pointer;box-shadow:0 4px 0 var(--navy)}
+.btn small{font-size:12px;font-weight:700;background:var(--navy);color:#fff;border-radius:999px;padding:4px 10px}
+.btn:hover{transform:translateY(1px);box-shadow:0 3px 0 var(--navy)}
+.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--green-d);outline-offset:2px}
+h2{margin:0 0 10px;font-weight:900;font-size:24px;line-height:1.4}
+section .lead{margin:0 0 20px;font-size:15px}
+
+/* 1画面目 */
+.hero{padding:28px 0 36px;border-bottom:1px solid var(--line)}
+.hero h1{margin:14px 0 12px;font-weight:900;font-size:29px;line-height:1.35;letter-spacing:.01em}
+.hero h1 em{font-style:normal;color:var(--green-d)}
+.hero .lead{margin:0 0 16px;font-size:16px;line-height:1.8}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
+.chips li{border:2px solid var(--navy);border-radius:999px;padding:3px 14px;font-weight:900;font-size:14px}
+.me{display:flex;align-items:center;gap:12px;margin:22px 0 0}
+.me img{width:60px;height:60px;border-radius:50%;object-fit:cover;object-position:50% 22%;border:2px solid var(--navy);flex:none}
+.me p{margin:0;font-size:13px;line-height:1.6;color:var(--gray)}
+.me b{display:block;color:var(--navy);font-size:15px;font-weight:900}
+.hero .btn{width:100%}
+.mini{margin:0;padding:0;list-style:none;counter-reset:s}
+.mini li{counter-increment:s;display:flex;gap:10px;align-items:baseline;padding:6px 0;border-top:1px solid #CFE9DA;font-weight:700;font-size:14px;line-height:1.5}
+.mini li:first-child{border-top:0}
+.mini li::before{content:counter(s);flex:none;width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-weight:900;font-size:12px;display:inline-flex;align-items:center;justify-content:center;transform:translateY(-1px)}
+
+/* 止まりやすい所 */
+.stuck{padding:44px 0 40px;background:#F5F7FB}
+.stuck ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.stuck li{background:#fff;border:2px solid var(--line);border-radius:12px;padding:12px 14px 12px 46px;position:relative;font-weight:700;font-size:15px;line-height:1.6}
+.stuck li::before{content:"！";position:absolute;left:12px;top:12px;width:24px;height:24px;border-radius:50%;background:var(--navy);color:var(--green);font-weight:900;font-size:13px;display:flex;align-items:center;justify-content:center}
+.stuck .after-note{margin:18px 0 0;font-weight:900;font-size:16px;line-height:1.7}
+
+/* 9ステップ */
+.steps{padding:48px 0 52px}
+.stage{border:2px solid var(--navy);border-radius:16px;overflow:hidden;margin:0 0 18px;background:#fff}
+.stage-h{background:var(--navy);color:#fff;padding:12px 16px;display:flex;align-items:center;gap:10px}
+.stage-h .no{flex:none;background:var(--green);color:var(--navy);font-weight:900;font-size:13px;line-height:1;padding:6px 9px;border-radius:4px}
+.stage-h h3{margin:0;font-weight:900;font-size:18px;line-height:1.4}
+.stage ol{margin:0;padding:6px 16px 4px;list-style:none}
+.stage ol li{display:flex;gap:12px;align-items:baseline;padding:10px 0;border-top:1px solid var(--line);font-weight:700;font-size:15px;line-height:1.55}
+.stage ol li:first-child{border-top:0}
+.stage ol li b{flex:none;width:30px;height:30px;border-radius:50%;border:2px solid var(--navy);font-weight:900;font-size:14px;display:inline-flex;align-items:center;justify-content:center;transform:translateY(-2px)}
+.with{margin:0 12px 12px;background:var(--green-l);border-radius:10px;padding:12px 14px}
+.with .k{display:block;font-weight:900;font-size:13px;color:var(--green-d);margin:0 0 2px}
+.with p{margin:0;font-size:14px;line-height:1.7}
+.fee-note{margin:4px 0 0;padding:14px 16px;border:2px solid var(--navy);border-radius:12px;background:#FFF8E1;font-weight:900;font-size:15px;line-height:1.7}
+.side-list{margin:8px 0 0;padding:0;list-style:none}
+.side-list li{position:relative;padding:6px 0 6px 28px;font-weight:700;font-size:15px;line-height:1.6}
+.side-list li::before{content:"";position:absolute;left:4px;top:14px;width:13px;height:7px;border-left:3px solid var(--green-d);border-bottom:3px solid var(--green-d);transform:rotate(-45deg)}
+
+/* 実例 */
+.cases{padding:44px 0 48px;border-top:1px solid var(--line)}
+.total{background:var(--green-l);border-radius:14px;padding:18px 16px;text-align:center;margin:0 0 10px}
+.total .note-in{margin-top:10px;font-size:13px;font-weight:500;line-height:1.6;text-align:left}
+.total p{margin:0;font-weight:900;font-size:15px;line-height:1.5}
+.total .num{font-size:22px;color:var(--green-d);line-height:1.2;margin:4px 0}
+.total .num b{font-size:44px;letter-spacing:-.01em}
+.note{margin:0 0 22px;font-size:13px;line-height:1.6;color:var(--gray)}
+.grid{display:grid;gap:14px;grid-template-columns:1fr}
+.card{border:2px solid var(--navy);border-radius:12px;padding:16px 16px 6px;background:#fff}
+.card h3{margin:10px 0 6px;font-weight:900;font-size:17px;line-height:1.45}
+.row{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:9px 0;border-top:1px solid var(--line)}
+.row .what{font-size:14px;line-height:1.5;color:var(--gray);font-weight:700;flex:1}
+.row .ba{white-space:nowrap;font-weight:900;font-size:15px;line-height:1.2;text-align:right}
+.row .ba i{font-style:normal;color:var(--gray);margin:0 4px}
+.row .ba b{color:var(--green-d);font-size:24px}
+
+/* 竹内翼とよくある質問 */
+.prof{padding:44px 0 48px;background:#F5F7FB}
+.prof-box{display:flex;gap:16px;align-items:flex-start;margin:0 0 18px}
+.prof-box img{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 22%;border:2px solid var(--navy);flex:none}
+.prof-box .nm{margin:0 0 4px;font-weight:900;font-size:20px}
+.prof-box .role{margin:0;font-size:13px;line-height:1.6;color:var(--gray);font-weight:700}
+.prof p.bio{margin:0 0 14px;font-size:15px;line-height:1.8}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 6px}
+.nums div{background:#fff;border:2px solid var(--navy);border-radius:12px;padding:12px}
+.nums .v{margin:0;font-weight:900;font-size:24px;line-height:1.2;color:var(--green-d)}
+.nums .v small{font-size:13px}
+.nums .k{margin:4px 0 0;font-size:12px;line-height:1.5;font-weight:700}
+.prof .note{margin:6px 0 34px}
+.faq details{background:#fff;border:2px solid var(--line);border-radius:12px;margin:0 0 10px}
+.faq summary{list-style:none;cursor:pointer;padding:14px 44px 14px 16px;position:relative;font-weight:900;font-size:15px;line-height:1.6}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:16px;top:12px;font-size:22px;line-height:1;color:var(--green-d)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0;padding:0 16px 14px;font-size:14px;line-height:1.8}
+
+/* 案内と申し込み */
+.cta{background:var(--navy);color:#fff;padding:48px 0 56px}
+.cta h2{font-size:25px;line-height:1.45}
+.cta h2 em{font-style:normal;color:var(--green)}
+.cta .lead{margin:0 0 18px;font-size:15px}
+.sort{margin:0 0 22px;padding:16px 16px 12px;border:2px solid var(--green);border-radius:12px}
+.sort .tag{margin-bottom:8px}
+.sort ul{margin:0;padding:0;list-style:none}
+.sort li{position:relative;padding:5px 0 5px 28px;font-weight:700;font-size:15px;line-height:1.6}
+.sort li::before{content:"";position:absolute;left:4px;top:11px;width:13px;height:7px;border-left:3px solid var(--green);border-bottom:3px solid var(--green);transform:rotate(-45deg)}
+.sort .fee{margin:8px 0 0;font-size:13px;line-height:1.6;color:#C9D0E0}
+.cta .me p{color:#C9D0E0}.cta .me b{color:#fff}.cta .me img{border-color:#fff}
+.cta .me{margin:0 0 26px}
+.form{background:#fff;color:var(--navy);border-radius:16px;padding:22px 18px 24px}
+.form .ttl{margin:0 0 14px;font-weight:900;font-size:18px;text-align:center}
+.f{margin:0 0 14px}
+.f label{display:block;margin:0 0 5px;font-weight:900;font-size:14px}
+.req,.opt{display:inline-block;margin-left:8px;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:900;line-height:1.4;vertical-align:1px}
+.req{background:var(--navy);color:#fff}.opt{background:#EEF1F6;color:var(--gray)}
+.f input,.f select,.f textarea{width:100%;border:2px solid var(--line);border-radius:10px;padding:12px;font:inherit;font-size:16px;color:var(--navy);background:#fff}
+.f textarea{min-height:92px;resize:vertical}
+.form .btn{width:100%;margin-top:6px}
+.form .btn.sending{opacity:.6;pointer-events:none}
+.f-err{margin:0 0 12px;padding:10px 12px;border:2px solid #c0392b;border-radius:10px;color:#c0392b;font-weight:700;font-size:14px}
+.f-priv{margin:14px 0 0;text-align:center;font-size:13px;line-height:1.7;color:var(--gray)}
+.f-priv a{color:inherit;text-underline-offset:3px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.after{display:none}
+.form[data-step="cal"] .before{display:none}
+.form[data-step="cal"] .after{display:block}
+.after p{margin:0 0 14px;font-weight:900;font-size:16px;line-height:1.7;text-align:center}
+.cal-frame{display:block;width:100%;height:640px;border:0;border-radius:12px;background:#fff}
+footer{padding:22px 0 30px;text-align:center;font-size:12px;color:var(--gray)}
+footer a{color:inherit;text-underline-offset:3px}
+footer p{margin:0 0 6px}
+
+@media (min-width:860px){
+  .wrap{padding:0 32px}
+  .hero{padding:56px 0 60px}
+  .hero-in{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+  .hero h1{font-size:40px;margin:18px 0 16px}
+  .hero .lead{font-size:18px}
+  .hero .btn{width:auto;min-width:340px}
+  .hero-side{border:2px solid var(--navy);border-radius:16px;padding:22px 22px 18px;background:var(--green-l)}
+  .hero-side .tag{margin:0 0 8px}
+  h2{font-size:32px}
+  section .lead{font-size:16px}
+  .stuck{padding:64px 0 60px}
+  .stuck ul{grid-template-columns:1fr 1fr;gap:14px}
+  .steps{padding:72px 0 76px}
+  .stages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+  .stage{margin:0;display:flex;flex-direction:column}
+  .stage ol{flex:1}
+  .cases{padding:72px 0 80px}
+  .total{padding:24px}
+  .total p{font-size:18px}.total .num{font-size:30px}.total .num b{font-size:64px}.total .note-in{font-size:13px;text-align:center}
+  .grid{grid-template-columns:repeat(3,1fr);gap:18px}
+  .fee-note{margin-top:22px;text-align:center}
+  .prof{padding:72px 0 80px}
+  .prof-in{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .prof .note{margin-bottom:0}
+  .nums .v{font-size:30px}
+  .cta{padding:80px 0 88px}
+  .cta-in{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .cta h2{font-size:30px}
+  .cta .lead{font-size:16px}
+  .form{padding:30px 28px 32px}
+}
+@media (max-width:859px){.hero-side{display:none}.hero h1 br{display:none}}
+</style>
+<!-- Google タグ（GA4・RAPPIT） -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WGKH6LDX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());</script>
+</head>
+<body>
+
+<header class="hero"><div class="wrap"><div class="hero-in">
+  <div class="hero-main">
+    <span class="tag">無料のAI導入相談</span>
+    <h1><span class="p">AIを使って、</span><span class="p">業務を効率化していく</span><br><em class="p">9ステップ</em></h1>
+    <p class="lead">この9ステップを、竹内翼がサポートしています。まずは無料の導入相談で、今どのステップにいて、次に何をやるかを整理しませんか。</p>
+    <ul class="chips"><li>導入相談は無料</li><li>オンライン1時間</li></ul>
+    <a class="btn" href="#form">無料で相談してみる<small>入力は1分</small></a>
+    <div class="me"><img src="../img/w_face.jpg" alt="竹内翼の写真" width="60" height="60"><p><b>お話は、竹内翼が直接うかがいます</b>年商20億のAIベンチャーで、マーケティングの責任者を務めています。</p></div>
+  </div>
+  <aside class="hero-side">
+    <span class="tag">無料の導入相談で整理すること</span>
+    <ul class="side-list"><li>今どのステップまで進んでいるか</li><li>次に何をやるか</li><li>ご自身で進めるか、竹内のサポートを受けるか</li></ul>
+  </aside>
+</div></div></header>
+
+<main>
+<section class="steps"><div class="wrap">
+  <h2><span class="p">9ステップと、</span><span class="p">竹内のサポートでやること</span></h2>
+  <p class="lead">9つのステップを、3つの段階に分けました。段階ごとに、竹内のサポートでやることを書いています。</p>
+  <div class="stages">
+    <article class="stage">
+      <div class="stage-h"><span class="no">段階1</span><h3>AIを使い始める</h3></div>
+      <ol><li><b>1</b>Claude&nbsp;Codeをインストールする</li><li><b>2</b>Claude&nbsp;Codeの簡単な使い方を覚える</li><li><b>3</b>まずは一つの業務を任せてみる</li></ol>
+      <div class="with"><span class="k">竹内のサポートでやること</span><p>画面を共有しながらインストールし、お仕事の中から最初の1つをAIに任せるところまで進めます。</p></div>
+    </article>
+    <article class="stage">
+      <div class="stage-h"><span class="no">段階2</span><h3>AIに任せる業務を決める</h3></div>
+      <ol><li><b>4</b>業務を棚卸しする</li><li><b>5</b>棚卸しした業務をClaude&nbsp;Codeに送り、自動化や効率化できるものを聞く</li></ol>
+      <div class="with"><span class="k">竹内のサポートでやること</span><p>今の業務を一緒に書き出し、AIに任せる順番を決めます。</p></div>
+    </article>
+    <article class="stage">
+      <div class="stage-h"><span class="no">段階3</span><h3>仕組みにして広げる</h3></div>
+      <ol><li><b>6</b>Addnessをインストールし、仕事に必要なツールをつなぐ</li><li><b>7</b>自動化できるものは自動化する</li><li><b>8</b>毎日ToDoをこなしていく</li><li><b>9</b>自動化の範囲を広げ、自分の使いやすいようにカスタマイズする</li></ol>
+      <div class="with"><span class="k">竹内のサポートでやること</span><p>Addnessは、目標とToDoをまとめて、AIが仕事を進められるようにするサービスです（竹内がマーケティングの責任者を務める会社のサービスです）。Addnessと仕事のツールをつなぎ、自動化を1つずつ足していきます。毎日のToDoをご自身で進められるようになるまで、一緒に進めます。</p></div>
+    </article>
+  </div>
+  <p class="fee-note">9ステップを一緒に進めるサポートは有料です。内容と料金は、無料の導入相談の中でご案内します。</p>
+</div></section>
+
+<section class="cases"><div class="wrap">
+  <h2>AIに任せている仕事の例</h2>
+  <p class="lead">竹内が働く年商20億のAIベンチャーで、AIに任せている仕事の例です。</p>
+  <p class="note">※矢印の左の時間は、人が手でやる場合の一般的な目安です。</p>
+  <div class="grid">
+    <article class="card"><span class="tag">営業（商談の前）</span><h3>商談の準備は、前日までにAIが済ませています</h3>
+      <div class="row"><span class="what">提案資料づくり（1件あたり）</span><span class="ba">約4時間<i>→</i><b>0分</b></span></div>
+      <div class="row"><span class="what">1週間にできる商談の数</span><span class="ba">3件<i>→</i><b>7〜8件</b></span></div></article>
+    <article class="card"><span class="tag">CS（お客様対応）</span><h3>お客様への返信文は、AIが書いています</h3>
+      <div class="row"><span class="what">問い合わせの整理（1日あたり）</span><span class="ba">約2時間<i>→</i><b>0分</b></span></div>
+      <div class="row"><span class="what">返信の文を書く（1件あたり）</span><span class="ba">約10分<i>→</i><b>0分</b></span></div></article>
+    <article class="card"><span class="tag">経理</span><h3>毎朝の転記と照合は、AIがしています</h3>
+      <div class="row"><span class="what">銀行の明細の転記（毎朝）</span><span class="ba">約30分<i>→</i><b>0分</b></span></div>
+      <div class="row"><span class="what">明細の仕分け（1か月あたり）</span><span class="ba">約17時間<i>→</i><b>0分</b></span></div></article>
+  </div>
+</div></section>
+
+<section class="prof"><div class="wrap"><div class="prof-in">
+  <div>
+    <h2>竹内翼とは</h2>
+    <div class="prof-box"><img loading="lazy" src="../img/w_face.jpg" alt="竹内翼の写真" width="96" height="96"><div><p class="nm">竹内 翼</p><p class="role">AIベンチャーのマーケティング責任者</p></div></div>
+    <p class="bio">人事として、150人規模の会社にAIを導入しました。外に頼んでいた問い合わせ対応・動画作成・記事作成・SNS運用などをAIで自動化し、1社で年間約6,000万円の外注費を削減しました。今は年商20億のAIベンチャーで、マーケティングの責任者を務めています。マーケティングの仕事は、AIを使って1人で回しています。</p>
+    <div class="nums">
+      <div><p class="v">150<small>人規模</small></p><p class="k">AIを導入した会社</p></div>
+      <div><p class="v">約6,000<small>万円</small></p><p class="k">AIの導入で削減した外注費（1社・年間）</p></div>
+    </div>
+    <p class="note">※竹内個人の経歴です。相談された方に同じ結果を約束するものではありません。</p>
+  </div>
+  <div class="faq">
+    <h2>よくある質問</h2>
+    <details><summary>Claude&nbsp;Codeを触ったことがなくても大丈夫ですか？</summary><p>インストールするところから、画面を共有しながら一緒に進めます。</p></details>
+    <details><summary>Windowsのパソコンでもできますか？</summary><p>Claude&nbsp;Codeは、MacでもWindowsでも使えます。</p></details>
+    <details><summary>小さい会社や個人事業でも相談できますか？</summary><p>1人の会社・個人事業から、100人規模の会社までご相談いただけます。</p></details>
+    <details><summary>9ステップのサポートの料金はいくらですか？</summary><p>進める範囲と期間によって変わるため、無料の導入相談の中でご案内します。</p></details>
+    <details><summary>AIのツールの料金はかかりますか？</summary><p>Claude&nbsp;Codeを使うには、Claudeの有料プランが要ります。どのプランから始めるのがよいかも、相談でお伝えします。</p></details>
+    <details><summary>相談の後に、何か申し込まないといけませんか？</summary><p>いいえ。相談だけで終わっても、料金はかかりません。</p></details>
+  </div>
+</div></div></section>
+
+<section class="cta" id="form"><div class="wrap"><div class="cta-in">
+  <div>
+    <h2><em class="p">無料のAI導入相談</em><span class="p">（オンライン1時間）で、</span><br><span class="p">今どのステップにいるかを</span><span class="p">確かめませんか。</span></h2>
+    <p class="lead">今のお仕事をうかがいながら、竹内が整理します。準備は要りません。相談だけで終わっても、料金はかかりません。</p>
+    <div class="sort"><span class="tag">相談で決めること</span>
+      <ul><li>今どのステップまで進んでいるか</li><li>次に何をやるか</li><li>ご自身で進めるか、竹内のサポートを受けるか</li></ul>
+      <p class="fee">サポートは有料です。内容と料金は、相談の中でご案内します。</p></div>
+  </div>
+  <form class="form" novalidate>
+    <div class="before">
+      <p class="ttl">無料相談のお申し込み</p>
+      <div class="hp" aria-hidden="true"><label>ここには入力しないでください<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      <div class="f"><label for="f-name">お名前<span class="req">必須</span></label><input type="text" name="name" id="f-name" required autocomplete="name" placeholder="山田 太郎"></div>
+      <div class="f"><label for="f-email">メールアドレス<span class="req">必須</span></label><input type="email" name="email" id="f-email" required autocomplete="email" placeholder="example@mail.com"></div>
+      <div class="f"><label for="f-company">会社名・屋号<span class="req">必須</span></label><input type="text" name="company" id="f-company" required autocomplete="organization" placeholder="個人の方は屋号か「個人」"></div>
+      <div class="f"><label for="f-size">従業員数<span class="req">必須</span></label><select name="size" id="f-size" required><option value="" disabled selected>選んでください</option><option>1人（自分だけ）</option><option>2〜10人</option><option>11〜50人</option><option>51〜100人</option><option>101人以上</option></select></div>
+      <div class="f"><label for="f-message">相談したいこと<span class="opt">任意</span></label><textarea name="message" id="f-message" placeholder="例：ステップ3まで進んだが、次に何を任せればいいか分からない"></textarea></div>
+      <p class="f-err" role="alert" hidden></p>
+      <button class="btn" type="submit" id="send">無料で相談を申し込む</button>
+      <p class="f-priv">送ったあとに、相談の日時を選べます。<br><span class="p">ご入力いただいた情報は、</span><span class="p"><a href="../../privacy.html" target="_blank" rel="noopener">個人情報の取り扱いについて</a>に沿って</span><span class="p">取り扱います。</span></p>
+    </div>
+    <div class="after"><p class="cal-done"></p><div id="cal"></div></div>
+  </form>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+  <p>運営：株式会社RAPPIT　｜　<a href="../../privacy.html" target="_blank" rel="noopener">個人情報の取り扱いについて</a></p>
+</div></footer>
+
+<script>
+/* フォームを送る → 相談の日時を選ぶ（送り先と予約ページは /ai/ と同じ） */
+(function(){
+var CFG={"endpoint":"https://script.google.com/macros/s/AKfycbwMBu4dDKdsGgq6FczFki-glBZvnC-6FqD1vw2O6gZmeLUw2rY1ELrIjxlli5k77ykzmw/exec","booking_url":"https://calendar.google.com/calendar/appointments/schedules/AcZssZ22UInD1GLLEt0wSn90bUMRkBfsKuHQ0HTt7bIdy24QhfE3XTHQ6lD46czwwAEPf--35vl9U_lY?gv=true"};
+var f=document.querySelector('form.form');if(!f)return;
+var btn=document.getElementById('send'),err=f.querySelector('.f-err'),cal=document.getElementById('cal'),done=f.querySelector('.cal-done');
+var src='';try{var q=new URLSearchParams(location.search);src=q.get('v')||q.get('utm_content')||q.get('utm_source')||''}catch(e){}
+function show(m){err.textContent=m;err.hidden=!m}
+function val(n){var el=f.querySelector('[name="'+n+'"]');return el?el.value.trim():''}
+function finish(){
+  if(CFG.booking_url){done.innerHTML='この度はお申し込みいただき、誠にありがとうございます。<br>続けて、ご希望の日時をお選びください。';var i=document.createElement('iframe');i.src=CFG.booking_url;i.title='相談の日時を選ぶ';i.className='cal-frame';cal.appendChild(i)}
+  else{done.innerHTML='この度はお申し込みいただき、誠にありがとうございます。<br>ご相談の日時は、メールでご連絡いたします。'}
+  f.setAttribute('data-step','cal');f.scrollIntoView({block:'start'});
+}
+f.addEventListener('submit',function(ev){
+  ev.preventDefault();if(btn.disabled)return;
+  var d={kind:'無料相談',name:val('name'),email:val('email'),company:val('company'),size:val('size'),message:val('message'),src:src,page:location.pathname,hp:val('website')};
+  var miss=['name','email','company','size'].filter(function(n){return !d[n]})[0];
+  if(miss){show('お名前・メールアドレス・会社名（屋号）・従業員数をご入力ください。');f.querySelector('[name="'+miss+'"]').focus();return}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)){show('メールアドレスをご確認ください。');f.querySelector('[name="email"]').focus();return}
+  if(!CFG.endpoint){show('ただいま準備中です。');return}
+  show('');btn.disabled=true;btn.classList.add('sending');
+  fetch(CFG.endpoint,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(d)})
+   .then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){if(!j||!j.ok)throw 0;try{gtag('event','generate_lead',{form_kind:d.kind||'',page_path:location.pathname})}catch(e){}finish()})
+   .catch(function(){btn.disabled=false;btn.classList.remove('sending');show('送信できませんでした。お手数ですが、時間をおいて、もう一度お試しください。')});
+});
+})();
+</script>
+</body>
+</html>
