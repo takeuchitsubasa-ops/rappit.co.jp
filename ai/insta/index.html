@@ -42,8 +42,8 @@
 <body>
 <header class="hero"><div class="wrap"><div class="hero-in"><svg class="rays" viewBox="0 0 70 65" aria-hidden="true"><path d="M10 40 L2 25 M30 25 L27 5 M48 29 L62 12"/></svg>
 <div class="from"><img src="profile.jpg" width="400" height="500" alt="竹内翼"><p><b>竹内翼</b><span>インスタを見てくださった方へ</span></p></div>
-<h1 id="hero-title"><span class="key">先着10社限定<svg class="underline" viewBox="0 0 400 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9 C85 16 134 3 211 9 S332 5 397 8"/></svg></span><br>無料のAI導入相談</h1>
-<div id="hero-copy"><p class="lead">1社1社しっかりサポートしたいので、今回は先着10社に限って、ご相談をお受けします。</p><p class="lead">どの仕事からAIに任せられるかを、1時間のオンライン相談で一緒に整理します。</p></div>
+<h1 id="hero-title"><span class="key">先着3社限定<svg class="underline" viewBox="0 0 400 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9 C85 16 134 3 211 9 S332 5 397 8"/></svg></span><br>無料のAI導入相談</h1>
+<div id="hero-copy"><p class="lead">1社1社しっかりサポートしたいので、今回は先着3社に限って、ご相談をお受けします。</p><p class="lead">どの仕事からAIに任せられるかを、1時間のオンライン相談で一緒に整理します。</p></div>
 <ul class="chips" id="hero-chips"><li>無料</li><li>オンライン1時間</li><li id="remaining" hidden></li></ul>
 <div class="hero-action"><svg class="arrow" viewBox="0 0 100 90" aria-hidden="true"><path d="M15 8 C84 2 86 44 52 73 M48 50 L49 78 L76 70"/></svg><a class="btn" href="#form" data-want="talk"><span id="hero-cta">無料で相談を申し込む</span></a><small class="minute">入力は1分</small><a class="doc-link" href="#form" data-want="doc">まず資料を請求する →</a></div>
 <div class="hero-visual" aria-hidden="true"><img class="v1" src="made-yt.jpg" alt=""><img class="v2" src="made-lp.jpg" alt=""><img class="v3" src="made-sns.jpg" alt=""><span class="v-note">どれも、AIと作りました</span></div>
@@ -115,7 +115,7 @@ var last=null,src='insta';try{var q=new URLSearchParams(location.search);src=q.g
 
 if(CFG.full){
  document.getElementById('hero-title').textContent='満席になりました';
- document.getElementById('hero-copy').innerHTML='<p class="lead">先着10社の枠は、すべて埋まりました。たくさんのお申し込み、本当にありがとうございます。</p><p class="lead">次に枠が空いたら、メールでお知らせします。ご希望の方は、予約待ちにご登録ください。</p>';
+ document.getElementById('hero-copy').innerHTML='<p class="lead">先着3社の枠は、すべて埋まりました。たくさんのお申し込み、本当にありがとうございます。</p><p class="lead">次に枠が空いたら、メールでお知らせします。ご希望の方は、予約待ちにご登録ください。</p>';
  document.getElementById('hero-chips').hidden=true;
  ['hero-cta','send','wt-talk'].forEach(function(id){document.getElementById(id).textContent='予約待ちに登録する'});document.getElementById('form-title').textContent='予約待ち・資料請求';document.getElementById('wt-talk-sub').textContent='枠が空いたらお知らせ';
  }else{var remaining=document.getElementById('remaining');remaining.hidden=CFG.remaining==null;if(!remaining.hidden)remaining.textContent='残り'+CFG.remaining+'社'}
